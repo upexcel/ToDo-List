@@ -1,0 +1,84 @@
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-image: url('../../../assets/background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.9;
+}
+
+.heading {
+  font-size: -webkit-xxx-large;
+  font-family: 'Trade Winds', ;
+}
+
+.insert-task-form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.label {
+  display: block;
+  margin-bottom: 12px;
+
+}
+
+input {
+  width: 100%;
+  padding: 5px;
+  border-radius: 8px;
+  border: 2px solid darkgray;
+  background-color: transparent;
+  outline: none;
+  margin-bottom: 5px;
+}
+
+.form-container {
+  width: 100%;
+  padding-right: 50px;
+  padding-left: 80px;
+  margin-top: 30px;
+  background-image: url('../../../assets/page.jpg');
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center;
+  background-size: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+textarea {
+  width: 100%;
+  outline: none;
+  border: 2px solid darkgray;
+  border-radius: 8px;
+  background-color: transparent;
+  padding: 5px;
+}
+
+.action {
+  text-align: center;
+}
+
+.submit-button {
+  padding: 5px;
+  border-radius: 8px;
+}
+
+.submit-button:disabled {
+  cursor: not-allowed;
+}
+
+@media only screen and (max-width: 600px) {
+  .insert-task-form {
+    width: 95%;
+  }
+
+  .heading {
+    font-size: xx-large;
+  }
+}

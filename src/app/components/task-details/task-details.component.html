@@ -1,0 +1,21 @@
+<div class="description-container">
+  <div class="notes">
+    <div *ngFor="let task of tasks" class="task-description">
+      <i class="fa fa-times" (click)="deleteTask(task.id)"></i>
+      <h4>{{task.taskName}}</h4>
+      <h4>Date : {{ task.taskDate}}</h4>
+      <div [innerHtml]="task.taskDescription" class="details"></div>
+    </div>
+  </div>
+
+  <div class="history">
+    <div class="table-head">
+      <div>Action</div>
+      <div> Date</div>
+    </div>
+    <div *ngFor="let log of logs" class="table-body">
+      <div class="content">{{log.action}}</div>
+      <div class="content">{{log.time}}</div>
+    </div>
+  </div>
+</div>

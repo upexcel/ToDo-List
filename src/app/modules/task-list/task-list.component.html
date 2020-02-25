@@ -1,0 +1,21 @@
+<div class="container">
+  <main class="insert-task-form">
+    <h1 class="heading">MY TASK BOARD</h1>
+    <form [formGroup]="taskForm" class="form-container" (ngSubmit)='onSubmit(taskForm.value)'>
+      <label class="label">Task Name</label>
+      <input formControlName="taskName" placeholder="Task Name" type="text">
+
+      <label class="label">Task Date</label>
+      <input formControlName="taskDate" placeholder="Task Date" type="date">
+
+      <label class="label">Task Description</label>
+      <textarea formControlName="taskDescription" rows="4" placeholder="Task Description"></textarea>
+
+      <div class="action">
+        <button class="submit-button" [disabled]="!taskForm.valid" type="submit">Submit</button>
+      </div>
+    </form>
+  </main>
+
+  <app-task-details [taskLists]='taskLists'></app-task-details>
+</div>
